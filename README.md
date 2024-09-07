@@ -497,6 +497,7 @@ All benchmarks suck, but this one might suck more than others.
 - I've tried to follow any "best performance" advice when I could find it in each library's docs, but it's a certainty that some stones were left unturned when implementing ~20 different search engines.
 - Despite my best efforts, result quality is still extremely variable between libraries, and even between search terms. In some cases, results are very poor but the library is very fast; in other cases, the results are better, but the library is quite slow. What use is extreme speed when the search quality is sub-par? This is a subjective, nuanced topic that will surely affect how you interpret these numbers. I consider uFuzzy's search quality second-to-none, so my view of most faster libraries is typically one of quality trade-offs I'm happy not to have made. I encourage you to evaluate the results for all benched search phrases manually to decide this for yourself.
 - Many fulltext & document-search libraries compared here are designed to work best with exact terms rather than partial matches (which this benchmark is skewed towards).
+- This benchmark searches over 4MB of medium-length chunks of text, on the order of a phrase or a sentence. Searching 4MB of longer documents would make uFuzzy look worse compared to libraries that pre-index. uFuzzy is not designed for document search, however, so the results below are a useful guide to the indended use case.
 
 Still, something is better than a hand-wavy YMMV/do-it-yourself dismissal and certainly better than nothing.
 
